@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Form</title>
+
+<style>
+/* Reset */
+*{
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Center screen */
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+background-image: url(https://picsum.photos/300/200?40);
+}
+
+/* Form Box */
+.form-box{
+  width:720px;
+  height: 500px;
+  padding:30px;
+  border-radius:25px;
+
+  /* 5px rounded dashed gradient border */
+  border:5px dashed transparent;
+  background-image:
+    linear-gradient(#f3eaea,#fff),
+    linear-gradient(135deg,#00d4ff,#7b2ff7);
+  background-origin:border-box;
+  background-clip:padding-box,border-box;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+.form-box h2{
+  text-align:center;
+  margin-bottom:25px;
+  font-size:32px;
+}
+
+/* Form */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+/* Inputs */
+input, textarea{
+  padding:14px;
+  font-size:16px;
+  border-radius:20px;
+  border:1px solid #ccc;
+  outline:none;
+}
+
+textarea{
+  height:50px;
+  resize:none;
+}
+
+/* Button */
+button{
+  padding:14px;
+  font-size:16px;
+  border-radius:20px;
+  border:none;
+  cursor:pointer;
+  background:linear-gradient(135deg,#000,#333);
+  color:#fff;
+  transition:0.3s;
+}
+
+button:hover{
+  background:linear-gradient(135deg,#00d4ff,#7b2ff7);
+  color:#000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+  <h2>Payment Section</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+</body>
+</html>

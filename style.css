@@ -1,0 +1,276 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background: #f2f2f2;
+  color: #222;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 60px;
+  background: #000000;
+  position: fixed;
+  z-index: 1;
+  border-radius: 70px;
+  width: 100%;
+  height: 70px;
+}
+
+/* LOGO */
+.Logo {
+  position: relative;
+  z-index: 5;
+}
+
+.Logo img {
+  width: 70px;
+  height: auto;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* NAVBAR */
+nav {
+  position: relative;
+  z-index: 2;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 28px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00d4ff;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("https://picsum.photos/1200/600?design");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text {
+  color: #ffffff;
+  max-width: 700px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ===== PORTFOLIO ===== */
+.portfolio {
+  padding: 80px 60px;
+  background: #ffffff;
+}
+.portfolio{
+    text-align:center;
+    padding:60px 0;
+}
+
+.portfolio h2{
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+/* visible area */
+.portfolio-wrapper{
+    width:100%;
+    overflow:hidden;
+}
+
+/* moving container */
+.portfolio-track{
+    display:flex;
+    gap:25px;
+    animation: slide 5s alternate-reverse infinite;
+}
+
+/* images */
+.portfolio-track img{
+    width:280px;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/* animation */
+@keyframes slide{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform:translateX(-50%);
+    }
+}
+
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.portfolio-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  animation: portfolio-grid 15s infinite;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  padding: 80px 60px;
+  background: #f7f7f7;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.contact textarea {
+  resize: none;
+  height: 80px;
+  border-radius: 20px;
+}
+
+.btn {
+  padding: 12px;
+  background: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  background: #00d4ff;
+  color: #000;
+}
+
+/* ===== PAYMENT ===== */
+.payment {
+  padding: 80px 60px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.payment h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.payment p {
+  margin-bottom: 30px;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.payment-options img {
+  width: 80px;
+  height: 70px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.payment-options img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* ===== HR ===== */
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 500px) {
+  .header {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .Logo img {
+    width: 100px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+  
+}
